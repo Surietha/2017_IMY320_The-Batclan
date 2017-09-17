@@ -1,0 +1,364 @@
+@font-face {
+    font-family: 'ugly_kidsregular';
+    src: url('uglykids-regular-webfont.woff2') format('woff2'),
+         url('uglykids-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'i_still_knowregular';
+    src: url('i_still_know-webfont.woff2') format('woff2'),
+         url('i_still_know-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+p{
+	
+	    font-family: 'ugly_kidsregular';
+		font-size:20px;
+}
+body
+{
+background-image: url("bricks.jpg");
+background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+cursor: crosshair;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+  
+}
+.top:before {
+  content: '';
+  display: block;
+  width: 110%;
+  height: 100%;
+  position: fixed;
+pointer-events: none;
+  background: radial-gradient(
+    circle 9vmax at var(--cursorX) var(--cursorY),
+    rgba(255,255,255,.5) 0%,
+    rgba(0,0,0,.6) 90%,
+      rgba(0,225,0,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,9) 100% 
+  )
+  
+}
+
+.inside{
+	padding-top:50px;
+	
+	
+}
+.about:hover{
+	cursor:pointer;
+}
+.kclcik:hover{
+	cursor:pointer;
+	
+}
+.about{
+	padding:px;
+	text-align:center;
+	width:500px;
+	height:500px;
+  display: none;
+    opactiy: 0;
+	background-color:white;
+position: absolute;
+margin-left:800px;
+margin-top:20px;
+-webkit-animation: flicker 7s ;
+background: radial-gradient(
+    circle 20vmax ,
+    rgba(255,255,255,0.5) 0%,
+	 rgba(255,255,255,0.2) 25%,
+	  rgba(255,255,255,0.4) 35%,
+	  rgba(255,255,255,0.2) 85%,
+    rgba(0,0,0,.6) 90%,
+      rgba(255,255,255,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0.0) 100% )
+	
+	
+	}
+.picOfme:hover{
+	
+	cursor:pointer;
+	 
+  )
+}
+	.ktext{
+	padding:px;
+	text-align:center;
+	width:500px;
+	height:500px;
+	 display: none;
+    opactiy: 0;
+  opactiy: 0;
+-webkit-animation: flicker 7s ;
+	background-color:white;
+position: absolute;
+background: radial-gradient(
+    circle 18vmax ,
+    rgba(255,255,255,0.5) 0%,
+	 rgba(255,255,255,0.2) 25%,
+	  rgba(255,255,255,0.4) 35%,
+	  rgba(255,255,255,0.2) 85%,
+    rgba(0,0,0,.6) 90%,
+      rgba(255,255,255,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0.0) 100% )
+	
+	
+}
+.insidemonster{
+
+padding-top:120px;
+}
+	
+		.monstertext{
+	padding:px;
+	text-align:center;
+	width:500px;
+	height:500px;
+	display: none;
+    opactiy: 0;
+	 margin-left:500px;
+margin-top:10px;
+	background-color:white;
+position: absolute;
+-webkit-animation: flicker 7s ;
+background: radial-gradient(
+    circle 18vmax ,
+    rgba(255,255,255,0.5) 0%,
+	 rgba(255,255,255,0.2) 25%,
+	  rgba(255,255,255,0.4) 35%,
+	  rgba(255,255,255,0.2) 85%,
+    rgba(0,0,0,.6) 90%,
+      rgba(255,255,255,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0.0) 100% )
+	
+	
+}
+.insidek{
+
+padding-top:120px;
+}
+#mon{
+		cursor:pointer;
+	float:right;
+	
+	
+	}
+	
+			.me{
+	padding:px;
+	text-align:center;
+	width:500px;
+	height:500px;
+	display: none;
+    opactiy: 0;
+	 margin-left:500px;
+
+	background-color:white;
+position: absolute;
+-webkit-animation: flicker 7s ;
+background: radial-gradient(
+    circle 20vmax ,
+    rgba(255,255,255,0.5) 0%,
+	 rgba(255,255,255,0.2) 25%,
+	  rgba(255,255,255,0.4) 35%,
+	  rgba(255,255,255,0.2) 85%,
+    rgba(0,0,0,.6) 90%,
+      rgba(255,255,255,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0.0) 100% )
+	
+	
+}
+.meinside{
+
+padding-top:50px;
+margin:auto 0px;
+}
+.picOfme{
+	
+margin-left: 500px;
+
+width:400px;
+height:300px;
+
+
+	
+	
+}
+	
+			.specs{
+	padding:px;
+	text-align:center;
+	width:500px;
+	height:500px;
+	
+-webkit-animation: flicker 7s ;
+display: none;
+    opactiy: 0;
+
+	background-color:white;
+position: absolute;
+
+background: radial-gradient(
+    circle 12vmax ,
+    rgba(255,255,255,0.5) 0%,
+	 rgba(255,255,255,0.2) 25%,
+	  rgba(255,255,255,0.4) 35%,
+	  rgba(255,255,255,0.2) 85%,
+    rgba(0,0,0,.6) 90%,
+      rgba(255,255,255,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0.0) 100% )
+	
+	
+}
+.specsinside{
+
+padding-top:150px;
+}
+#restriction{
+	position: left;
+	margin-top:200px;
+	margin-left:300px;
+	
+	
+}
+#restriction:hover{
+	
+ 
+		cursor:pointer;
+	}
+.textabout{
+	
+	font-family:'i_still_knowregular';
+	font-size: 42px;
+margin-left: 100px;
+padding-top:200px;
+	
+	 color:#4C0302;
+}
+
+.textabout {
+ font-family: 'ugly_kidsregular';
+position:absolute;
+padding:0px;
+margin-left:600px;
+font-size: 100px;
+	cursor:pointer;
+color:black;
+	
+}
+#ab:hover {
+	color:#4C0302;
+	transition:text-shadow 5s linear;
+-webkit-transition:text-shadow 10s linear;
+-moz-transition:text-shadow 10s linear;
+
+-webkit-filter: blur(6px); 
+text-shadow:0px 1px #4C0302,0px 2px #4C0302, 0px 3px #4C0302, 0px 4px #4C0302, 0px 5px #4C0302, 0px 6px #4C0302, 0px 7px #4C0302, 0px 8px #4C0302, 0px 9px #4C0302, 0px 10px #4C0302, 0px 11px #4C0302, 0px 12px #4C0302, 0px 13px #4C0302, 0px 14px #4C0302, 0px 15px #4C0302, 0px 16px #4C0302, 0px 17px #4C0302, 0px 18px #4C0302, 0px 19px #4C0302, 0px 20px #4C0302, 0px 21px #4C0302, 0px 22px #4C0302, 0px 23px #4C0302, 0px 24px #4C0302, 0px 25px #4C0302, 0px 26px #4C0302, 0px 27px #4C0302, 0px 28px #4C0302, 0px 29px #4C0302, 0px 30px #4C0302, 0px 31px #4C0302, 0px 32px #4C0302, 0px 33px #4C0302, 0px 34px #4C0302, 0px 35px #4C0302, 0px 36px #4C0302, 0px 37px #4C0302, 0px 38px #4C0302, 0px 39px #4C0302, 0px 40px #4C0302, 0px 41px #4C0302, 0px 42px #4C0302, 0px 43px #4C0302, 0px 44px #4C0302, 0px 45px #4C0302, 0px 46px #4C0302, 0px 47px #4C0302, 0px 48px #4C0302, 0px 49px #4C0302, 0px 50px #4C0302, 0px 51px #4C0302,0px 52px #4C0302, 0px 53px #4C0302, 0px 54px #4C0302, 0px 55px #4C0302, 0px 56px #4C0302, 0px 57px #4C0302, 0px 58px #4C0302, 0px 59px #4C0302, 0px 60px #4C0302, 0px 61px #4C0302, 0px 62px #4C0302, 0px 63px #4C0302, 0px 64px #4C0302, 0px 65px #4C0302, 0px 66px #4C0302, 0px 67px #4C0302, 0px 68px #4C0302, 0px 69px #4C0302, 0px 70px #4C0302, 0px 71px #4C0302, 0px 72px #4C0302, 0px 73px #4C0302, 0px 74px #4C0302, 0px 75px #4C0302, 0px 76px #4C0302, 0px 77px #4C0302, 0px 78px #4C0302, 0px 79px #4C0302, 0px 80px #4C0302, 0px 81px #4C0302, 0px 82px #4C0302, 0px 83px #4C0302, 0px 84px #4C0302, 0px 85px #4C0302, 0px 86px #4C0302, 0px 87px #4C0302, 0px 88px #4C0302, 0px 89px #4C0302, 0px 90px #4C0302, 0px 91px #4C0302, 0px 92px #4C0302, 0px 93px #4C0302, 0px 94px #4C0302, 0px 95px #4C0302, 0px 96px #4C0302, 0px 97px #4C0302, 0px 98px #4C0302, 0px 99px #4C0302, 0px 100px #4C0302
+
+
+}
+
+	
+	@-webkit-keyframes flicker{
+	0%{ opacity: 0.1;}
+	10%{ opacity: 0.0;}
+
+	80%{ opacity: 1;}
+90% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+
+.dripping {  position: absolute; background:#4C0302; -webkit-filter: blur(2px); 
+	 border-radius: 50%; border: 0.px solid white;width: 40px;
+
+	height: 10px; top: 110px; -webkit-animation: drips 16s  infinite; }
+	
+.blur{
+
+ -webkit-animation: blurring 1s;
+
+
+}
+@-webkit-keyframes blurring
+{
+  0%  { -webkit-filter: blur(0px); }
+  100% { -webkit-filter: blur(7px); }
+}
+#d{
+	
+		margin-left:60px;
+	float:left;
+}
+
+@-webkit-keyframes drips {
+90% { top: 60%; width: 30px; height: 40px; }
+  100% { top: 40%; width: 30px; height: 40px; }
+}
+
+
+
+h2 {
+  font-family: 'ugly_kidsregular';
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 4rem;
+padding:0.5px;
+margin-bottom:0.5px
+}
+
+.one{
+  margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+
+	
+}
+
+
+h2:not(light):hover{
+  opacity: 0;
+  animation: flashText 6s ease-out ;
+}
+#light{
+
+margin-left: auto;
+    margin-right: auto;
+	    width: 8em;
+	 opacity: 0;
+	  font-family: 'i_still_knowregular';
+}
+#light:hover{
+	
+
+	  animation: flash 6s ease-out  ;
+}
+
+@keyframes flash{
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}

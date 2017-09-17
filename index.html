@@ -1,0 +1,241 @@
+<html>
+<head>
+<title> My name is shadow</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<audio  id="light" preload="auto" >
+  <source src="light.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>
+
+<body>
+<div class="top">
+
+<div class="about">
+
+<p class="inside"> 
+<i>My name is Shadow</i><br/> Is a first person horror game.<br/>
+The ultimate goal of the game,<br/>  shut down the compound and lock the final door.<br/>
+In order to lock this door ,<br/>you need to collect 4 keys. <br/>
+Do not expect it to be easy!<br/>
+Lurking in the shadows <br/> is a creature  following you endlessly<br/> 
+Its  instinct  to kill you<br/>
+its only weakness...light<br/>
+</p>
+</div>
+<h1 class="textabout" onclick="document.getElementById('light').play();" id="ab">About</h1>
+<h2 class="one">My</h2>
+
+  <h2 class="one">name </h2>
+ <h2 class="one"> is</h2>  
+<h2  id="light">Shadow</h2>
+
+
+<div class="monstertext">
+<p class="insidemonster"> 
+<b>About the Monster </b><br/>
+Little is known about this abomination<br/>
+It was created in the COS labs <br/>
+Was released  <br/>and has promptly killed off the entire staff<br/>
+The bodies seemingly dragged into the shadows<br/>
+It cannot handle bright lights<br/>
+IT MUST BE LOCKED IN!<br/>
+</p>
+</div>
+  
+
+<div id="mon" width="300px" height="300px"  />
+<video  id="monstervid" width="300px" height="300px" >
+  <source src="monsterview.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</div>
+
+<div class="kclcik"><img src="images.png"  onclick="document.getElementById('sound1').play(),document.getElementById('light').play()"  width="300px" height="300px">
+<audio  id="sound1" preload="auto">
+  <source src="k.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+
+
+
+
+
+<div class="ktext">
+
+<p class="insidek"> 
+<b>About K </b><br/>
+This is the voice of the mysterious, K<br/>
+She is attempting to guide you to the keys<br/>
+by using the intercom system <br/>
+She is  one of the few  employees  still alive<br/>
+Maybe you can find her office?<br/>
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<img src="1.jpg"  class="picOfme"/>
+<script>
+$(".picOfme").click(function() {
+
+document.getElementById('light').play();
+        $(".picOfme").attr("src","2.jpg");
+
+    return false;
+});
+</script>
+
+<div class="me">
+<p class="meinside"> 
+Hello there!<br/>
+I am Surietha Hammond<br/>
+Age 23<br/>
+Currently I study multimedia <br/>at the University of Pretoria<br/>
+<b> About the Design</b><br/>
+This design is my own concept and creation<br/>
+with help from friends and family who always let me<br/>
+bounce ideas off them <br/>
+and of course let us not forgot our old<br/>
+friend Google<br/>
+It was inspired by the IMY 320 game I am creating<br/>
+along with my love for all things horror<br/>
+<b> Contact details</b><br/>
+Email<br/>
+u13012917@tuks.co.za<br/>
+</p>
+</div>
+
+
+<div class="specs">
+<p class="specsinside"> 
+<b>Specifications </b><br/>
+Created in Unity<br/>
+Horror genre<br/>
+Age restriction  13<br/>
+PC game play<br/>
+Uses keyboard and Mouse input<br/>
+</p>
+</div>
+
+
+<div id="restriction">
+<img src="specs.png" width="200px"height="200px" class="specifications"onclick="document.getElementById('light').play();"/>
+</div>
+<audio preload="auto" loop autoplay id="ambient" >
+  <source src="Ambience Slow Deep.wav" type="audio/wav">
+Your browser does not support the audio element.
+</audio>
+</div>
+</body>
+<script>
+function update(e){
+  var x = e.clientX
+  var y = e.clientY 
+
+  document.documentElement.style.setProperty('--cursorX', x + 'px')
+  document.documentElement.style.setProperty('--cursorY', y + 'px')
+}
+
+document.addEventListener('mousemove',update)
+document.addEventListener('touchmove',update)
+
+</script>
+<script>
+
+ var vid = document.getElementById("ambient");
+vid.volume = 0.1;
+document.getElementById('mon').onclick = function (){
+    document.getElementById('monstervid').play();
+   
+    document.getElementById('light').play();
+      $(".monstertext").fadeIn(1000);
+      var myVar = setInterval(myTimer, 20000);
+      function myTimer() 
+      {
+       $(".monstertext").fadeOut(800);
+      }
+};
+$(".textabout").click(function () {
+
+
+      $(".about").fadeIn(1000);
+      var myVar = setInterval(myTimer, 40000);
+      function myTimer() 
+      {
+       $(".about").fadeOut(1000);
+      }
+    });
+    $(".specifications").click(function () {
+      $(".specs").fadeIn(1000);
+      var myVar = setInterval(myTimer, 10000);
+      function myTimer() 
+      {
+       $(".specs").fadeOut(200);
+      }
+    });
+    
+    $(".picOfme").click(function () {
+      $(".me").fadeIn(500);
+      var myVar = setInterval(myTimer, 30000);
+      function myTimer() 
+      {
+       $(".me").fadeOut(1000);
+      }
+    });
+    $(".kclcik").click(function () {
+      $(".ktext").fadeIn(500);
+      var myVar = setInterval(myTimer, 30000);
+      function myTimer() 
+      {
+       $(".ktext").fadeOut(1000);
+      }
+    }); 
+    
+ $(".mon").click(function () {
+    
+    });
+    
+    
+
+var el = document.getElementById("light");
+// el.style.opacity = 0;
+var  a=false;
+var  b=false;
+var c=false;
+document.getElementById('one').onmouseover = function() {
+a=true
+
+
+}
+document.getElementById('two').onmouseover = function() {
+b=true
+
+
+}
+document.getElementById('three').onmouseover = function() {
+
+
+if(a&&b)
+{
+
+
+};
+}
+
+
+
+
+</script>
+
+</html>

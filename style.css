@@ -1,0 +1,408 @@
+
+
+/*imported fonts*/
+@font-face {
+    font-family: 'ugly_kidsregular';
+    src: url('uglykids-regular-webfont.woff2') format('woff2'),
+         url('uglykids-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'i_still_knowregular';
+    src: url('i_still_know-webfont.woff2') format('woff2'),
+         url('i_still_know-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p{
+	
+	    font-family: 'ugly_kidsregular';
+		font-size:20px;
+}
+body
+{
+background-image: url("br.jpg");
+background-repeat: repeat;
+
+}
+
+html {
+cursor: crosshair;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+  
+}
+
+/*below is the script for the flashlight*/
+.top:before {
+content: '';
+display: block;
+width: 110%;
+height: 100%;
+z-index:6;
+position: fixed;
+pointer-events: none;
+	  background: radial-gradient(
+			circle 9vmax at var(--cursorX) var(--cursorY),
+			rgba(255,255,255,.5) 0%,
+			rgba(0,0,0,.6) 90%,
+			rgba(0,225,0,0) 60%,
+			rgba(0,0,0,.5) 80%,
+			rgba(0,0,0,1) 100% 
+	  )
+  
+}
+
+
+/*for the mirror*/
+.shelf{
+position: absolute;
+top:30px;
+left:65px;
+z-index:0;
+}
+
+.inside{
+	padding-top:50px;	
+}
+
+
+/*everything for about*/
+.about{
+z-index:7;
+
+text-align:center;
+width:500px;
+height:500px;
+top:30px;
+left:65px;
+display: none;
+opactiy: 0;
+background-color:white;
+position: absolute;
+
+-webkit-animation: flicker 7s ;
+background: radial-gradient(
+    circle 20vmax ,
+	rgba(255,255,255,.5) 0%,
+    rgba(0,0,0,.6) 90%,
+	rgba(0,0,0,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0) 100%  )
+	}
+	
+.textabout {
+ font-family: 'ugly_kidsregular';
+position:absolute;
+z-index:1;
+top:10px;
+right:23px;
+left:23px;
+font-size: 20px;
+cursor:pointer;
+color:black;
+	
+}
+
+#ab:hover {
+color:#4C0302;
+transition:text-shadow 5s linear;
+-webkit-transition:text-shadow 10s linear;
+-moz-transition:text-shadow 10s linear;
+-webkit-filter: blur(6px); 
+text-shadow:0px 1px #4C0302,0px 2px #4C0302, 0px 3px #4C0302, 0px 4px #4C0302, 0px 5px #4C0302, 0px 6px #4C0302, 0px 7px #4C0302, 0px 8px #4C0302, 0px 9px #4C0302, 0px 10px #4C0302, 0px 11px #4C0302, 0px 12px #4C0302, 0px 13px #4C0302, 0px 14px #4C0302, 0px 15px #4C0302, 0px 16px #4C0302, 0px 17px #4C0302, 0px 18px #4C0302, 0px 19px #4C0302, 0px 20px #4C0302, 0px 21px #4C0302, 0px 22px #4C0302, 0px 23px #4C0302, 0px 24px #4C0302, 0px 25px #4C0302, 0px 26px #4C0302, 0px 27px #4C0302, 0px 28px #4C0302, 0px 29px #4C0302, 0px 30px #4C0302, 0px 31px #4C0302, 0px 32px #4C0302, 0px 33px #4C0302, 0px 34px #4C0302, 0px 35px #4C0302, 0px 36px #4C0302, 0px 37px #4C0302, 0px 38px #4C0302, 0px 39px #4C0302, 0px 40px #4C0302, 0px 41px #4C0302, 0px 42px #4C0302, 0px 43px #4C0302, 0px 44px #4C0302, 0px 45px #4C0302, 0px 46px #4C0302, 0px 47px #4C0302, 0px 48px #4C0302, 0px 49px #4C0302, 0px 50px #4C0302, 0px 51px #4C0302,0px 52px #4C0302, 0px 53px #4C0302, 0px 54px #4C0302, 0px 55px #4C0302, 0px 56px #4C0302, 0px 57px #4C0302, 0px 58px #4C0302, 0px 59px #4C0302, 0px 60px #4C0302, 0px 61px #4C0302, 0px 62px #4C0302, 0px 63px #4C0302, 0px 64px #4C0302, 0px 65px #4C0302, 0px 66px #4C0302, 0px 67px #4C0302, 0px 68px #4C0302, 0px 69px #4C0302, 0px 70px #4C0302, 0px 71px #4C0302, 0px 72px #4C0302, 0px 73px #4C0302, 0px 74px #4C0302, 0px 75px #4C0302, 0px 76px #4C0302, 0px 77px #4C0302, 0px 78px #4C0302, 0px 79px #4C0302, 0px 80px #4C0302, 0px 81px #4C0302, 0px 82px #4C0302, 0px 83px #4C0302, 0px 84px #4C0302, 0px 85px #4C0302, 0px 86px #4C0302, 0px 87px #4C0302, 0px 88px #4C0302, 0px 89px #4C0302, 0px 90px #4C0302, 0px 91px #4C0302, 0px 92px #4C0302, 0px 93px #4C0302, 0px 94px #4C0302, 0px 95px #4C0302, 0px 96px #4C0302, 0px 97px #4C0302, 0px 98px #4C0302, 0px 99px #4C0302, 0px 100px #4C0302
+
+
+}
+@-webkit-keyframemes drips {
+90% { top: 60%; width: 30px; height: 40px; }
+100% { top: 40%; width: 30px; height: 40px; }
+}
+
+	
+	@-webkit-keyframes flicker{
+0%{ opacity: 0.1;}
+10%{ opacity: 0.0;}
+80%{ opacity: 1;}
+90% { opacity: 0.0; }
+100% { opacity: 1; }
+}
+
+.dripping {  position: absolute; background:#4C0302; -webkit-filter: blur(2px); 
+border-radius: 50%; border: 0.px solid white;width: 40px;
+height: 10px; top: 110px; -webkit-animation: drips 16s  infinite; }
+	
+.blur{
+	-webkit-animation: blurring 1s;
+}
+@-webkit-keyframes blurring
+{
+0%  { -webkit-filter: blur(0px); }
+100% { -webkit-filter: blur(7px); }
+}
+
+/*everything for K*/
+.kclcik{
+position: absolute;
+top:30px;
+right:0px;
+}
+
+.ktext{
+z-index:7;
+position: absolute;
+top:60px;
+left: 10px;
+text-align:center;
+width:500px;
+height:500px;
+display: none;
+opactiy: 0;
+opactiy: 0;
+-webkit-animation: flicker 7s ;
+background-color:white;
+position: absolute;
+background: radial-gradient(
+    circle 18vmax ,
+	rgba(255,255,255,.5) 0%,
+    rgba(0,0,0,.6) 90%,
+	rgba(0,0,0,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0) 100% )
+}
+
+.insidek{
+padding-top:120px;
+}
+
+
+
+
+/*everything for my information*/
+
+.picOfme:hover{
+content: url('2.png');
+  )
+}
+
+.pin{	
+position: absolute;
+top:60px;
+right: 100px;
+
+}
+	
+.me{
+position: absolute;
+top:200px;
+right:10px;
+text-align:center;
+width:500px;
+height:500px;
+display: none;
+opactiy: 0;
+margin-left:500px;
+z-index:7;
+background-color:white;
+position: absolute;
+-webkit-animation: flicker 7s ;
+	background: radial-gradient(
+			circle 20vmax ,
+		   rgba(255,255,255,.5) 0%,
+			rgba(0,0,0,.6) 90%,
+			  rgba(0,0,0,0) 60%,
+			rgba(0,0,0,.5) 80%,
+			rgba(0,0,0,0) 100%
+		)
+	
+	
+}
+.meinside{
+padding-top:50px;
+margin:auto 0px;
+}
+
+.picOfme{
+	
+position: absolute;
+top:160px;
+right:300px;
+width:150px;
+height:100px;
+}
+
+
+
+/*everything for monster*/
+.insidemonster{
+
+padding-top:120px;
+}
+	
+.monstertext{
+z-index:7;
+padding:20px;
+text-align:center;
+width:500px;
+height:500px;
+display: none;
+opactiy: 0;
+margin-left:200px;
+margin-top:10px;
+background-color:white;
+position: absolute;
+-webkit-animation: flicker 7s ;
+background: radial-gradient(
+    circle 18vmax ,
+     rgba(255,255,255,.5) 0%,
+    rgba(0,0,0,.6) 90%,
+      rgba(0,225,0,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0) 100% )
+	
+	
+}
+
+.frame{
+position: absolute;
+top:340px;
+left:440px;
+z-index:0;
+	
+}
+#vid:hover{
+	-webkit-transform: rotate(3deg); 
+	
+}
+.frame:hover{
+	-webkit-transform: rotate(-3deg); 
+
+}
+
+#vid{
+position: absolute;
+top:340px;
+left:460px;
+z-index:1;
+	
+	}
+
+
+	/*everything for the restriction */
+.specs{
+	position: absolute;
+top:200px;
+right:10px;
+z-index:7;
+text-align:center;
+width:500px;
+height:500px;
+-webkit-animation: flicker 7s ;
+display: none;
+opactiy: 0;
+background-color:white;
+position: absolute;
+background: radial-gradient(
+    circle 12vmax ,
+   rgba(255,255,255,.5) 0%,
+    rgba(0,0,0,.6) 90%,
+      rgba(0,0,0,0) 60%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,0) 100% )
+	
+	
+}
+.specsinside{
+padding-top:150px;
+}
+
+#restriction{
+position: absolute;
+top:200px;
+right:450px;
+-ms-transform: rotate(7deg); /* IE 9 */
+-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+transform: rotate(7deg);		
+}
+
+#restriction:hover{
+-webkit-transform: rotate(0deg); 
+}
+		
+		
+.a{
+position: absolute;
+top:60px;
+right: 550px;
+z-index:0;
+	
+}
+
+
+#d{
+margin-left:60px;
+float:left;
+}
+
+
+
+
+	/*everything for the shadow title */
+h2 {
+font-family: 'ugly_kidsregular';
+color: white;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 4rem;
+padding:0.5px;
+margin-bottom:0.5px
+}
+
+.one{
+margin-left: auto;
+margin-right: auto;
+padding:1px;
+line-height: 30px;
+}
+#title{
+position: absolute;
+top:290px;
+left:190px;
+	
+}
+
+h2:not(light):hover{
+opacity: 0;
+animation: flashText 6s ease-out ;
+}
+#light{
+position: absolute;
+margin-left: auto;
+margin-right: auto;
+top:120px;
+left:120px;
+z-index:1;
+width: 8em;
+opacity: 0;
+font-family: 'i_still_knowregular';
+}
+
+#light:hover{
+animation: flash 6s ease-out  ;
+}
+
+@keyframes flash{
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes flashText {
+  to {
+    opacity: 0.15;
+  }
+}

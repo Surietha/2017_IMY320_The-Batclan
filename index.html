@@ -1,0 +1,249 @@
+<html>
+	<head>
+		<title> My name is shadow</title>
+		 <link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="jquery.min.js"></script>
+	</head>
+
+	<body>
+	<!--audio for the light flickering music-->
+		<audio  id="light" preload="auto" >
+			  <source src="light2.wav" type="audio/wav">
+			Your browser does not support the audio element.
+		</audio>
+	<!--mirror-->	
+	<div  class="shelf">
+		<img src="shelf.png"width="400px"height="300px" />
+	</div>
+	
+	<!--post it note-->
+	<div class="pin">
+		<img src="pin.png"width="600px"height="400px" />
+	</div>
+	
+	<div class="top">
+	<!--inside the about-->
+	<div class="about">
+		<p class="inside"> 
+			<i>My name is Shadow</i><br/> Is a first person horror game.<br/>
+			The ultimate goal of the game,<br/>  shut down the compound <br/>and lock the final door.<br/>
+			In order to lock this door ,<br/>you need to collect 4 keys. <br/>
+			Do not expect it to be easy!<br/>
+			Lurking in the shadows <br/> is a creature  following you endlessly<br/> 
+			Its  instinct  to kill you<br/>
+			its only weakness...light<br/>
+		</p>
+	</div>
+	
+	<!--About clicking text-->
+	<div class="a">
+		<img src="postit.png"width="100px"height="100px" />
+			<h1 class="textabout" onclick="document.getElementById('light').play();" id="ab">About</h1>
+	</div>
+	
+	<!--title-->
+	<h2  id="light">Shadow</h2>
+
+	<!--Text for the monster-->
+	<div class="monstertext">
+		<p class="insidemonster"> 
+			<b>About the Monster </b><br/>
+			Little is known about this abomination<br/>
+			It was created in the COS labs <br/>
+			Was released  <br/>and has promptly killed off the entire staff<br/>
+			The bodies seemingly dragged into the shadows<br/>
+			It cannot handle bright lights<br/>
+			IT MUST BE LOCKED IN!<br/>
+		</p>
+	</div>
+	  
+	<!--video and frame for the monster-->
+	<div id="mon" >
+		<img src="frame.png" width="230px" height="200px" class="frame"/>
+			<div id="vid">
+				<video  id="monstervid" width="200px" height="200px" >
+				  <source src="monsterview.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+				</video>
+			</div>
+	</div>
+
+<!--image and audio for the speaker-->
+	<div class="kclcik">
+		<img src="images.png"  onclick="document.getElementById('sound1').play(),document.getElementById('light').play()"  width="150px" height="150px">
+			<audio  id="sound1" preload="auto">
+				  <source src="k.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+			</audio>
+	</div>
+<!--about k text-->
+	<div class="ktext">
+		<p class="insidek"> 
+		<b>About K </b><br/>
+		This is the voice of the mysterious, K<br/>
+		She is attempting to guide you to the keys<br/>
+		by using the intercom system <br/>
+		She is  one of the few  employees  still alive<br/>
+		Maybe you can find her office?<br/>
+		</p>
+	</div>
+	<!--image of me-->
+	<img src="1.png"  class="picOfme" onclick="document.getElementById('light').play();"/>
+	<script>
+	//$(".picOfme").click(function() {
+
+	//document.getElementById('light').play();
+		//$(".picOfme").attr("src","2.png");
+
+	  //  return false;
+	//});
+	</script>
+	<!--The about me content-->
+	<div class="me">
+		<p class="meinside"> 
+		Hello there!<br/>
+		I am Surietha Hammond<br/>
+		Age 23<br/>
+		Currently I study multimedia <br/>at the University of Pretoria<br/>
+		<b> About the Design</b><br/>
+		This design is my own concept and creation<br/>
+		with help from friends and family who always let me<br/>
+		bounce ideas off them <br/>
+		and of course let us not forgot our old<br/>
+		friend Google<br/>
+		It was inspired by the IMY 320 game I am creating<br/>
+		along with my love for all things horror<br/>
+		<b> Contact details</b><br/>
+		Email<br/>
+		u13012917@tuks.co.za<br/>
+		</p>
+	</div>
+
+	<!--inside the restriction-->
+	<div class="specs">
+		<p class="specsinside"> 
+		<b>Specifications </b><br/>
+		Created in Unity<br/>
+		Horror genre<br/>
+		Age restriction  13<br/>
+		PC game play<br/>
+		Uses keyboard and Mouse input<br/>
+		</p>
+	</div>
+
+		<!--image for the restriction-->
+	<div id="restriction">
+		<img src="poster.png" width="150px"height="150px" class="specifications"onclick="document.getElementById('light').play();"/>
+	</div>
+	
+	<!--audio for background music-->
+		<audio preload="auto" loop autoplay id="ambient" >
+			  <source src="Ambience Slow Deep.wav" type="audio/wav">
+			Your browser does not support the audio element.
+		</audio>
+</div>
+</body>
+<script>
+//script for the flash light crusor
+	function update(e){
+	  var x = e.clientX
+	  var y = e.clientY 
+	
+	  document.documentElement.style.setProperty('--cursorX', x + 'px')
+	  document.documentElement.style.setProperty('--cursorY', y + 'px')
+	}
+
+	document.addEventListener('mousemove',update)
+	document.addEventListener('touchmove',update)
+
+	</script>
+	<script>
+
+//script toswitch on the monster text
+//all the script below just sets fadein and then fade out on a timer for user to view the script
+	 var vid = document.getElementById("ambient");
+	vid.volume = 0.1;
+	document.getElementById('mon').onclick = function (){
+	  $(".about").fadeOut(1000);
+	    $(".me").fadeOut(1000);
+	    $(".specs").fadeOut(1000);
+	   // $(".monstertex").fadeOut(1000);
+	      $(".ktext").fadeOut(1000);
+		    document.getElementById('monstervid').play();
+		    document.getElementById('light').play();
+			$(".monstertext").fadeIn(1000);
+		      var myVar = setInterval(myTimer, 20000);
+			      function myTimer() 
+			      {
+				$(".monstertext").fadeOut(800);
+			      }
+	};
+	
+	//script for the about text to show
+	$(".textabout").click(function () {  $(".about").fadeOut(1000);
+	    $(".me").fadeOut(1000);
+	    $(".specs").fadeOut(1000);
+	    $(".monstertext").fadeOut(1000);
+	      $(".ktext").fadeOut(1000);
+	   $(".about").fadeIn(1000);
+	      var myVar = setInterval(myTimer, 40000);
+		      function myTimer() 
+		      {
+			$(".about").fadeOut(1000);
+		      }
+	    });
+	    
+	    //script for the spefictions script to show
+	    $(".specifications").click(function () {
+	      $(".about").fadeOut(1000);
+	    $(".me").fadeOut(1000);
+	    //$(".specs").fadeOut(1000);
+	   $(".monstertext").fadeOut(1000);
+	      $(".ktext").fadeOut(1000);
+	  $(".specs").fadeIn(1000);
+	      var myVar = setInterval(myTimer, 10000);
+		      function myTimer() 
+		      {
+			$(".specs").fadeOut(200);
+		      }
+	    });
+	    
+	    //for the information on me
+	    $(".picOfme").click(function () {
+	      $(".about").fadeOut(1000);
+	    //$(".me").fadeOut(1000);
+	    $(".specs").fadeOut(1000);
+	  $(".monstertext").fadeOut(1000);
+	      $(".ktext").fadeOut(1000);
+	    $(".me").fadeIn(500);
+	      var myVar = setInterval(myTimer, 30000);
+		      function myTimer() 
+		      {
+			$(".me").fadeOut(1000);
+		      }
+	    });
+	    
+	    //for k informatiom
+	    $(".kclcik").click(function () {
+	      $(".about").fadeOut(1000);
+	  $(".me").fadeOut(1000);
+	    $(".specs").fadeOut(1000);
+	    $(".monstertext").fadeOut(1000);
+	  //    $(".ktext").fadeOut(1000);
+	     $(".ktext").fadeIn(800)
+	      var myVar = setInterval(myTimer, 30000);
+		      function myTimer() 
+		      {
+			$(".ktext").fadeOut(1000);
+		      }
+	    }); 
+	    
+
+
+
+
+
+
+	</script>
+
+</html>
